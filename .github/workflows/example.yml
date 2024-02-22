@@ -10,6 +10,7 @@ jobs:
 
   build:
 
+    if: contains(github.event.issue.labels.*.name, 'example')
     runs-on: ubuntu-latest
     permissions:
       issues: write

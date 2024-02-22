@@ -25,6 +25,7 @@ runs:
 
     - name: Compute label
       id: compute_label
+      shell: bash
       run: echo "label=$(compute_label.py)" >> "$GITHUB_OUTPUT"
 
     - name: Create label
