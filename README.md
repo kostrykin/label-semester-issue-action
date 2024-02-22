@@ -5,7 +5,7 @@
 Assigns semester labels to newly created issues based on the date when the issue was opened (e.g., "WS 24/25").
 
 > [!CAUTION]
-> Right now only winter term labels are supported ("WS", not "SS").
+> Right now only winter term labels are supported (i.e. "WS", not "SS").
 
 In this repository, the action will be used for any issue labeled with `example` when created ([list of examples](https://github.com/kostrykin/label-semester-issue-action/issues?q%253Dis%253Aissue%252Bis%253Aclosed%252Blabel%253Aexample)).
 
