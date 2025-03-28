@@ -4,9 +4,6 @@
 
 Assigns semester labels to newly created issues based on the date when the issue was opened (e.g., "WS 24/25").
 
-> [!NOTE]
-> Right now only winter term labels are supported (i.e. "WS", not "SS").
-
 ---
 
 **Steps required to set this action up for a repository:**
