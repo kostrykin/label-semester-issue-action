@@ -26,7 +26,7 @@ In this repository, the action will be used for any issue labeled with `example`
    ```
 3. Add the action to the workflow:
    ```yml
-   - uses: kostrykin/label-semester-issue-action@v1.0.0
+   - uses: kostrykin/label-semester-issue-action@v1.0
    ```
    If you want you can configure the color of the labels:
    ```yml
@@ -34,7 +34,7 @@ In this repository, the action will be used for any issue labeled with `example`
        color: FF0000
    ```
 
-For a full example, see the workflow file *.github/workflows/example.yml* and the *example/* directory.
+For a full example, see the workflow file *.github/workflows/label.yml*.
 
 **List of further examples:**
 - https://github.com/BMCV/mobi-fs3-python
