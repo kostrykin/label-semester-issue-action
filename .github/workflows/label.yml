@@ -5,7 +5,7 @@ on:
     types: [opened]
 
 jobs:
-  build:
+  label:
     if: contains(github.event.issue.labels.*.name, '--label-semester-issue-action-test--')
     runs-on: ubuntu-latest
     permissions:
