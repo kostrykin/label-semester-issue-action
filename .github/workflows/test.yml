@@ -17,6 +17,9 @@ on:
       - 'action.yml'
       - '**/*.py'
 
+permissions:
+  issues: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
