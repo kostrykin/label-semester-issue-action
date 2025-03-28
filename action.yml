@@ -3,14 +3,14 @@ description: 'Assign semester labels to new issues'
 inputs:
 
   color:
-    description: The color of the label
+    description: The color of the label.
     default: FFFFFF
 
 outputs:
 
   label:
-    description: The assigned label text
-    value: ${{ steps.compute_label.outputs.label }}
+    description: The assigned label text.
+    value: ${{ steps.semester.outputs.description }}
 
 runs:
 
@@ -24,9 +24,8 @@ runs:
         GITHUB_ACTION_PATH: ${{ github.action_path }}
 
     - name: Compute label
-      id: compute_label
-      shell: bash
-      run: echo "label=$(compute_label.py)" >> "$GITHUB_OUTPUT"
+      uses: kostrykin/current-semester-action@v0.1
+      id: semester
 
     - name: Create label
       continue-on-error: true
@@ -36,7 +35,7 @@ runs:
           github.rest.issues.createLabel({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            name: '${{ steps.compute_label.outputs.label }}',
+            name: '${{ steps.semester.outputs.description }}',
             color: '${{ inputs.color }}'
           });
 
@@ -49,5 +48,5 @@ runs:
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            labels: ['${{ steps.compute_label.outputs.label }}']
+            labels: ['${{ steps.semester.outputs.description }}']
           });
