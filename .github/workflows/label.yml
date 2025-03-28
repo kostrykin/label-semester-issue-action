@@ -1,20 +1,15 @@
 name: Assign semester labels to new issues
 
 on:
-
   issues:
     types: [opened]
 
-
 jobs:
-
-  build:
-
-    if: contains(github.event.issue.labels.*.name, 'example')
+  label:
+    if: contains(github.event.issue.labels.*.name, '--label-semester-issue-action-test--')
     runs-on: ubuntu-latest
     permissions:
       issues: write
-
     steps:
 
-      - uses: kostrykin/label-semester-issue-action@master
+      - uses: ./
