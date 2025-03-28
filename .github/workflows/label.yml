@@ -6,7 +6,7 @@ on:
 
 jobs:
   label:
-    if: contains(github.event.issue.labels.*.name, '--label-semester-issue-action-test--')
+    if: contains(github.event.issue.title, '--label-semester-issue-action-test--')
     runs-on: ubuntu-latest
     permissions:
       issues: write
