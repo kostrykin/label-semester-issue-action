@@ -33,7 +33,7 @@ jobs:
         id: issue
         with:
           script: |
-            const issue = await github.issues.create({
+            const issue = await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
               title: '--label-semester-issue-action-test--',
