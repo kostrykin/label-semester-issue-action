@@ -60,9 +60,11 @@ jobs:
 
             core.setOutput('has-label', hasLabel);
 
+      - run: echo "debug: '${{ steps.labels.outputs.has-label }}'"
+
       - name: Check result
         run: exit 1
-        if: ${{ !steps.labels.outputs.has-label }}
+        if: ${{ steps.labels.outputs.has-label == 'false' }}
 
       - name: Close issue
         uses: actions/github-script@v7
