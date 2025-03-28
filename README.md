@@ -1,13 +1,11 @@
 # *[label-semester-issue-action](https://github.com/kostrykin/label-semester-issue-action)*
 
-[![Assign semester labels to new issues](https://github.com/kostrykin/label-semester-issue-action/actions/workflows/example.yml/badge.svg)](https://github.com/kostrykin/label-semester-issue-action/actions/workflows/example.yml)
+[![Example](https://github.com/kostrykin/label-semester-issue-action/actions/workflows/label.yml/badge.svg)](https://github.com/kostrykin/label-semester-issue-action/actions/workflows/label.yml)
 
 Assigns semester labels to newly created issues based on the date when the issue was opened (e.g., "WS 24/25").
 
 > [!NOTE]
 > Right now only winter term labels are supported (i.e. "WS", not "SS").
-
-In this repository, the action will be used for any issue labeled with `example` when created ([list of examples](https://github.com/kostrykin/label-semester-issue-action/issues?q=is%3Aissue+label%3Aexample)).
 
 ---
 
